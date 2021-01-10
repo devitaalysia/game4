@@ -13,7 +13,7 @@ if (isset($_POST['submit'])){
 
  if ($eror === 4){ // 4 artinya gambar tidak di upload, atau boleh tulis !$eror
   echo "<script> 
-   alert ('harap upload foto');
+   alert ('Please upload a photo');
    document.location.href = 'profile.php';
    </script>";
   return False ;
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])){
  if (!in_array($ekstensigambar, $ekstensigambarValid)){
 
   echo "<script> 
-   alert ('ekstensi gambar tidak valid');
+   alert ('Invalid input');
    document.location.href = profile.php'; 
    </script>";
   return False ;
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])){
 
  if ($size > 2000000){
   echo "<script> 
-   alert ('ukuran size kebesaran');
+   alert ('Size too big!');
    document.location.href = 'profile.php';
    </script>";
   return False ;
@@ -78,8 +78,24 @@ $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">    
-    <title>Document</title>
-
+    <title>Profile</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/stylesheet.css" rel="stylesheet">
 
@@ -196,7 +212,7 @@ $conn->query($sql);
     echo "$totalseri";
   ?>
   </p>
-  </div>
+  
   <!-- <div class="row-lg-6"> -->
   <p>Ratio (W:L:D): 
   <?php 
@@ -218,9 +234,14 @@ $conn->query($sql);
     $result=mysqli_fetch_assoc($query);
     $totalseri=($result['total3']);
 
-    $jumlahmain=($totalmenang+$totalkalah);
-    $ratamenang=($totalmenang/$jumlahmain*100);
-    echo "$totalmenang : $totalkalah : $totalseri";
+    
+    $jumlahmain=($totalmenang+$totalkalah+$totalseri);
+    if(!$jumlahmain==0){
+      $ratamenang=($totalmenang/$jumlahmain*100);
+      echo "$totalmenang : $totalkalah : $totalseri";
+    } else {
+      echo "0 : 0 : 0";
+    }
     
   ?>
   </p>
@@ -245,8 +266,12 @@ $conn->query($sql);
     $totalseri=($result['total3']);
 
     $jumlahmain=($totalmenang+$totalkalah+$totalseri);
-    $ratamenang=($totalmenang/$jumlahmain*100);
-    echo "$ratamenang%";
+    if(!$jumlahmain==0){
+      $ratamenang=round($totalmenang/$jumlahmain*100);
+      echo "$ratamenang%";
+    } else{
+      echo "0%";
+    }
     
   ?>
   </p>
@@ -271,8 +296,12 @@ $conn->query($sql);
    $totalseri=($result['total3']);
 
     $jumlahmain=($totalmenang+$totalkalah+$totalseri);
-    $ratakalah=($totalkalah/$jumlahmain*100);
-    echo "$ratakalah%";
+    if(!$jumlahmain==0){
+      $ratakalah=round($totalkalah/$jumlahmain*100);
+      echo "$ratakalah%";
+    }else{
+      echo "0%";
+    }
     
   ?>
   </p>
@@ -297,12 +326,17 @@ $conn->query($sql);
     $totalseri=($result['total3']);
  
      $jumlahmain=($totalmenang+$totalkalah+$totalseri);
-     $rataseri=($totalseri/$jumlahmain*100);
-     echo "$rataseri%";
+     if(!$jumlahmain==0){
+       $rataseri=round($totalseri/$jumlahmain*100);
+       echo "$rataseri%";
+     }else{
+      echo "0%";
+     }
      
 
   ?>
   </p>
+  </div>
   <!-- </div>
   </div> -->
   

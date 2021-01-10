@@ -32,6 +32,7 @@
 body {
   place-content: center;
   background-position: center;
+  background-repeat: repeat-y;
 }
 
 h1 {
@@ -245,6 +246,7 @@ h6 {
 
 .stats {
   margin-top: 30px;
+  font-weight: bold;
 }
 
 .table > thead > tr > th,

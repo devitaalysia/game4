@@ -33,5 +33,10 @@ if($conn->query($sql) == true){
 	exit();	
 }
 }
+else if(!(isset($_POST['requestid']))){
+	header("Location: online.php"); /* Redirect browser */
+exit();
+}
+
 
 ?>

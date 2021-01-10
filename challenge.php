@@ -16,7 +16,23 @@ exit();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="jQueryAssets/jquery.ui-1.10.4.button.min.js" type="text/javascript"></script>
-
+<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/stylesheet.css" rel="stylesheet">
 
@@ -32,8 +48,9 @@ exit();
 
 <div class="container text-center" style="text-align:center;">
   
-  <h1> Waiting For Your Opponent To Accept Your Challenge... </h1>
-  <div style="width:80%; margin-left:10%; text-align:center"><div style="width:80%; margin-left:10%; text-align:left;">
+  <h1> Waiting your enemy... </h1>
+  <img src="images/waiting.gif" style="width:100%; height:auto;">
+  <div style=" margin-left:10%; text-align:center"><div style=" margin-left:10%; text-align:left;">
  <script>
  var id = <?php echo $_SESSION['requestid'] ?>; 
  function check(){ // this function send requestid to checkrequest.php page to check if the request is accepted or not

@@ -14,6 +14,7 @@ while ($row = $result->fetch_assoc()){
 		echo "<td>".$row['senderid']."</td>";
 		echo "<td>".$row['sendername']."</td>";
 		echo "<td>".'<form action="recieve.php" method="post"><input type="hidden" name="requestid" value="'.$row['requestid'].'"> <input type="submit" class="btn btn-info btn-sm" style="font-size:15px; background-color:#ED55A9;color:black; border-radius:34px " value="Accept"></form>'."</td>";
+		// echo "<td>".'<form action="recieve.php" method="post"><input type="hidden" name="requestid" value=""> <input type="submit" class="btn btn-info btn-sm" style="font-size:15px; background-color:#ED55A9;color:black; border-radius:34px " value="Decline"></form>'."</td>";
 		echo "</tr>";	
 	}
 }
