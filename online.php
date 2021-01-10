@@ -78,7 +78,7 @@ $error = "";
 <div class="container text-center" style="text-align:center;">
 
 <div class="row justify-content-center">
-<h1>ONLINE PLAYERS</h1> </div>
+<h1 style ="border-radius:10px;">ONLINE PLAYERS</h1> </div>
 
 <div style="width:80%; margin-left:10%; text-align:center">
 <div style="width:80%; margin-left:10%; text-align:left;"> 
@@ -98,7 +98,7 @@ $error = "";
   <div class="container text-center" style="text-align:center;">
   <div class="row justify-content-center">
 
-  <h1 style="width:750px align:center">REQUESTS</h1>
+  <h1 style="width:750px align:center; border-radius:10px;">REQUESTS</h1>
   <div class="text-center" style=" margin-left:25%;width:50%; background:white; color:black;" >
   <span id="req"> </span>
   </div>

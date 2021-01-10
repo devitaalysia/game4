@@ -276,6 +276,7 @@ radbtn();
   <!-- Modal content --> 
       <h1 id="plwin"> </h1><br>
   <center><form action="online.php">  <button type="submit" class="btn" style="background-color:#ED55A9" autofocus> Done!</button></form></center>
+ 
 </div>
 </body>
 </html>

@@ -148,7 +148,12 @@ $conn->query($sql);
     $result=mysqli_fetch_assoc($query);
     $totalkalah=($result['total2'])/2;
 
-    $jumlahmain=($totalmenang+$totalkalah);
+    $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
+    $query=mysqli_query($conn,$sql);
+    $result=mysqli_fetch_assoc($query);
+    $totalseri=($result['total3']);
+
+    $jumlahmain=($totalmenang+$totalkalah+$totalseri);
     echo "$jumlahmain";
     
   ?>
@@ -179,7 +184,18 @@ $conn->query($sql);
     echo "$totalkalah";
   ?>
   </p>
-  <p>Draw: </p>
+  <p>Draw: 
+  <?php 
+    include 'connection.php';
+    $conn = new mysqli($server, $username, $password,$dbname);
+    // var_dump($_SESSION['Id']); die;
+    $sql="SELECT COUNT(seri) AS total FROM seri WHERE Id='".$_SESSION['Id']."'";
+    $query=mysqli_query($conn,$sql);
+    $result=mysqli_fetch_assoc($query);
+    $totalseri=($result['total']);
+    echo "$totalseri";
+  ?>
+  </p>
   </div>
   <!-- <div class="row-lg-6"> -->
   <p>Ratio (W:L:D): 
@@ -197,9 +213,14 @@ $conn->query($sql);
     $result=mysqli_fetch_assoc($query);
     $totalkalah=($result['total2'])/2;
 
+    $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
+    $query=mysqli_query($conn,$sql);
+    $result=mysqli_fetch_assoc($query);
+    $totalseri=($result['total3']);
+
     $jumlahmain=($totalmenang+$totalkalah);
     $ratamenang=($totalmenang/$jumlahmain*100);
-    echo "$ratamenang%";
+    echo "$totalmenang : $totalkalah : $totalseri";
     
   ?>
   </p>
@@ -218,13 +239,44 @@ $conn->query($sql);
     $result=mysqli_fetch_assoc($query);
     $totalkalah=($result['total2'])/2;
 
-    $jumlahmain=($totalmenang+$totalkalah);
+    $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
+    $query=mysqli_query($conn,$sql);
+    $result=mysqli_fetch_assoc($query);
+    $totalseri=($result['total3']);
+
+    $jumlahmain=($totalmenang+$totalkalah+$totalseri);
     $ratamenang=($totalmenang/$jumlahmain*100);
     echo "$ratamenang%";
     
   ?>
   </p>
   <p>Average Lose: 
+  <?php 
+   include 'connection.php';
+   $conn = new mysqli($server, $username, $password,$dbname);
+   // var_dump($_SESSION['Id']); die;
+   $sql="SELECT COUNT(menang) AS total1 FROM menang WHERE Id='".$_SESSION['Id']."'";
+   $query=mysqli_query($conn,$sql);
+   $result=mysqli_fetch_assoc($query);
+   $totalmenang=($result['total1'])/2;
+   
+   $sql="SELECT COUNT(kalah) AS total2 FROM kalah WHERE Id='".$_SESSION['Id']."'";
+   $query=mysqli_query($conn,$sql);
+   $result=mysqli_fetch_assoc($query);
+   $totalkalah=($result['total2'])/2;
+
+   $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
+   $query=mysqli_query($conn,$sql);
+   $result=mysqli_fetch_assoc($query);
+   $totalseri=($result['total3']);
+
+    $jumlahmain=($totalmenang+$totalkalah+$totalseri);
+    $ratakalah=($totalkalah/$jumlahmain*100);
+    echo "$ratakalah%";
+    
+  ?>
+  </p>
+  <p>Average Draw: 
   <?php 
     include 'connection.php';
     $conn = new mysqli($server, $username, $password,$dbname);
@@ -238,14 +290,19 @@ $conn->query($sql);
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
     $totalkalah=($result['total2'])/2;
+ 
+    $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
+    $query=mysqli_query($conn,$sql);
+    $result=mysqli_fetch_assoc($query);
+    $totalseri=($result['total3']);
+ 
+     $jumlahmain=($totalmenang+$totalkalah+$totalseri);
+     $rataseri=($totalseri/$jumlahmain*100);
+     echo "$rataseri%";
+     
 
-    $jumlahmain=($totalmenang+$totalkalah);
-    $ratakalah=($totalkalah/$jumlahmain*100);
-    echo "$ratakalah%";
-    
   ?>
   </p>
-  <p>Average Draw: </p>
   <!-- </div>
   </div> -->
   
