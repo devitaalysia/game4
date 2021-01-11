@@ -102,11 +102,18 @@ function recievemove(){
 			   z = this.responseText;
 			   if(z == "pl1"){
 				  
-				   document.getElementById("plwin").innerHTML="<?php if($pltype == 'rec' ){ 
-					   $sql = "INSERT INTO ".$dbname.".menang(Id, menang) VALUES ('".$pl1id."',1)";
-					   $conn->query($sql);
-					   $sql = "INSERT INTO ".$dbname.".kalah(Id, kalah) VALUES ('".$pl2id."',1)";
-					   $conn->query($sql);
+
+
+				// $Win = "UPDATE users SET Win=((select Win from users where Id=".$pl1id.")+1) where Id = ".$pl1id;
+				// mysqli_query($dbconn,$Win);
+				// $Lose = "UPDATE users SET Lose=((select Lose from users where Id=".$pl2id.")+1) where Id = ".$pl2id;
+				// mysqli_query($dbconn,$Lose);
+
+				  document.getElementById("plwin").innerHTML="<?php if($pltype == 'rec' ){ 
+					 	$sql = "INSERT INTO ".$dbname.".menang(Id, menang) VALUES ('".$pl1id."',1)";
+					  	$conn->query($sql);
+						$sql = "INSERT INTO ".$dbname.".kalah(Id, kalah) VALUES ('".$pl2id."',1)";
+					   	$conn->query($sql);
 					   echo 'You ';
 				} else {
 					echo $pl1name;

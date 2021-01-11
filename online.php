@@ -116,7 +116,6 @@ $error = "";
   <div class="row justify-content-center">
 
   <h1 style="width:750px align:center; border-radius:10px;">REQUESTS</h1>
-  <div class="text-center" style=" margin-left:25%;width:50%; background:white; color:black;" >
   <span id="req"> </span>
   </div>
   
