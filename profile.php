@@ -128,7 +128,17 @@ $conn->query($sql);
     
     <div class="card">
       <br>
-    <h6 style="background-color: transparent;"><?= $_SESSION['Name']?>'s PROFILE</h6>
+    <h6 style="background-color: transparent;">
+      <?php 
+      echo $_SESSION['Name'];
+      if(substr($_SESSION['Name'], -1)=='s'){
+      echo "' PROFILE";  
+      } else{
+        echo "'S PROFILE";
+      }
+      ?>
+    
+    </h6>
     <?php
     include 'connection.php';
     $conn = new mysqli($server, $username, $password,$dbname);// this create connection
