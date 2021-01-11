@@ -35,7 +35,7 @@ exit();
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<title>Home - Online Test</title>
+<title>Home</title>
 
 <?php 
 $error1 = "";// this will be use for displaying error (Username or password is incorrect)
