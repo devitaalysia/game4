@@ -157,12 +157,12 @@ $conn->query($sql);
     $sql="SELECT COUNT(menang) AS total1 FROM menang WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalmenang=($result['total1'])/2;
+    $totalmenang=($result['total1']);
     
     $sql="SELECT COUNT(kalah) AS total2 FROM kalah WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalkalah=($result['total2'])/2;
+    $totalkalah=($result['total2']);
 
     $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
@@ -183,7 +183,7 @@ $conn->query($sql);
     $sql="SELECT COUNT(menang) AS total FROM menang WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalmenang=($result['total'])/2;
+    $totalmenang=($result['total']);
     echo "$totalmenang";
   ?>
   </p>
@@ -196,7 +196,7 @@ $conn->query($sql);
     $sql="SELECT COUNT(kalah) AS total FROM kalah WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalkalah=($result['total'])/2;
+    $totalkalah=($result['total']);
     echo "$totalkalah";
   ?>
   </p>
@@ -222,12 +222,12 @@ $conn->query($sql);
     $sql="SELECT COUNT(menang) AS total1 FROM menang WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalmenang=($result['total1'])/2;
+    $totalmenang=($result['total1']);
     
     $sql="SELECT COUNT(kalah) AS total2 FROM kalah WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalkalah=($result['total2'])/2;
+    $totalkalah=($result['total2']);
 
     $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
@@ -253,12 +253,12 @@ $conn->query($sql);
     $sql="SELECT COUNT(menang) AS total1 FROM menang WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalmenang=($result['total1'])/2;
+    $totalmenang=($result['total1']);
     
     $sql="SELECT COUNT(kalah) AS total2 FROM kalah WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalkalah=($result['total2'])/2;
+    $totalkalah=($result['total2']);
 
     $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
@@ -283,12 +283,12 @@ $conn->query($sql);
    $sql="SELECT COUNT(menang) AS total1 FROM menang WHERE Id='".$_SESSION['Id']."'";
    $query=mysqli_query($conn,$sql);
    $result=mysqli_fetch_assoc($query);
-   $totalmenang=($result['total1'])/2;
+   $totalmenang=($result['total1']);
    
    $sql="SELECT COUNT(kalah) AS total2 FROM kalah WHERE Id='".$_SESSION['Id']."'";
    $query=mysqli_query($conn,$sql);
    $result=mysqli_fetch_assoc($query);
-   $totalkalah=($result['total2'])/2;
+   $totalkalah=($result['total2']);
 
    $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
    $query=mysqli_query($conn,$sql);
@@ -313,12 +313,12 @@ $conn->query($sql);
     $sql="SELECT COUNT(menang) AS total1 FROM menang WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalmenang=($result['total1'])/2;
+    $totalmenang=($result['total1']);
     
     $sql="SELECT COUNT(kalah) AS total2 FROM kalah WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
     $result=mysqli_fetch_assoc($query);
-    $totalkalah=($result['total2'])/2;
+    $totalkalah=($result['total2']);
  
     $sql="SELECT COUNT(seri) AS total3 FROM seri WHERE Id='".$_SESSION['Id']."'";
     $query=mysqli_query($conn,$sql);
