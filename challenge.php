@@ -48,8 +48,8 @@ exit();
 
 <div class="container text-center" style="text-align:center;">
   
-  <h1> Waiting your enemy... </h1>
-  <img src="images/waiting.gif" style="width:100%; height:auto;">
+  <h1 style="border-radius:10px"> Waiting Your Enemy... </h1>
+  <img src="images/waiting.gif" style="width:100%; height:auto; border-radius:10px">
   <div style=" margin-left:10%; text-align:center"><div style=" margin-left:10%; text-align:left;">
  <script>
  var id = <?php echo $_SESSION['requestid'] ?>; 

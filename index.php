@@ -76,7 +76,7 @@ exit();
 		}
 		else 
 		{
-			$error1 = "UserName or Password Is Incorrect!";
+			$error1 = "Username or Password Is Incorrect!";
 			
 		}
 		
