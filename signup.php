@@ -86,7 +86,7 @@ exit();
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body style="background:url(images/bglandingpage.png); max-width:100%; height:auto; background-size:cover; background-repeat:no-repeat;">
+<body style="background:url(images/bglandingpage.png); max-width:100%; height:auto; background-size:cover; background-repeat:repeat-y;">
 <nav class="navbar navbar-default">
     <!-- Brand and toggle get grouped for better mobile display -->
 
